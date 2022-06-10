@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'questions.dart';
-import 'question.dart';
-import 'answer.dart';
+import '../data/questions.dart';
+import '../Widgets/question.dart';
+import '../Widgets/answer.dart';
 
 
 class QuizPage extends StatefulWidget {

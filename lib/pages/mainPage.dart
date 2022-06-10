@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_test_first_app/pages/AssetsAudioPlayer.dart';
+import 'package:new_test_first_app/Widgets/AssetsAudioPlayer.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -9,15 +9,16 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
+  bool username = false;
   String dropdownValue = 'All';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body:Container(
-        child: Center(
+    if( username == true) {
+      return Scaffold(
+        backgroundColor: Colors.white,
+        body: Container(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -31,21 +32,22 @@ class _MainPageState extends State<MainPage> {
                   ),
                 ),
                 Container(
-                    height: 50,
-                    margin: EdgeInsets.fromLTRB(0, 7, 0, 7),
-                    padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/quizPage');
-                      },
-                      child: Text(
-                        'Play Quiz',
-                        style: TextStyle(color: Colors.white),
-                      ),
+                  height: 50,
+                  margin: EdgeInsets.fromLTRB(0, 7, 0, 7),
+                  padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.red),
                     ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/quizPage');
+                    },
+                    child: Text(
+                      'Play Quiz',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(65, 5, 65, 5),
@@ -77,7 +79,8 @@ class _MainPageState extends State<MainPage> {
                             alignment: Alignment.center,
                             child: Text(
                               value,
-                              style: TextStyle(fontSize: 16, color: Colors.black),
+                              style: TextStyle(
+                                  fontSize: 16, color: Colors.black),
                             ),
                           );
                         }).toList(),
@@ -95,7 +98,8 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.fromLTRB(65, 0, 65, 0),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Colors.red),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, '/scoresPage');
@@ -110,7 +114,8 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.fromLTRB(65, 0, 65, 0),
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Colors.red),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, '/settings');
@@ -121,11 +126,54 @@ class _MainPageState extends State<MainPage> {
                       ),
                     )
                 ),
-                assetsAudioPlayer()
+                if (!username == false)
+                  assetsAudioPlayer()
               ],
             ),
           ),
-      ),
-    );
+        ),
+      );
+    }
+    else {
+      return Scaffold(
+          body: Container(
+            padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+            color: Colors.red,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                   textAlign: TextAlign.center,
+                   decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.white),
+                    labelStyle: TextStyle(color: Colors.white),
+                    hintText: 'Enter your name',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.teal,
+                      ),
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Colors.white),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      username = true;
+                    });
+                  },
+                  child: Text(
+                    'Continue',
+                    style: TextStyle(color: Colors.redAccent),
+                  ),
+                ),
+              ],
+            ),
+          )
+      );
+    }
   }
 }
