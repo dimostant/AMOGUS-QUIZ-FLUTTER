@@ -1,78 +1,69 @@
-const questions = [
-  {
-    'questionText': 'you gae or what?',
-    'answers': ['Black', 'yes', 'no', 'White'],
-  },
-  {
-    'questionText': 'What\'s Up ma nigga',
-    'answers': ['the teibol', 'the sky man!', 'me'],
-  },
-  {
-    'questionText': 'billie gaylish',
-    'answers': ['love', 'was entering', 'just', 'bitch'],
-  },
-  {
-    'questionText': 'Considering two girls are in a relationship, where one identifies her self as a man. Then is the other woman straight or gay',
-    'answers': ['what', 'the', 'actual', 'fuck'],
-  },
-  {
-    'questionText': 'mia karamelitsa kai mia karamelitsa kai mia karamelitsa poso kanei?',
-    'answers': ['1', '1 + 1 - 1', '1 - 1 + 1', 'mastora gamiesai'],
-  },
-  {
-    'questionText': 'If a non-binary person likes only non-binary, does that make him gay?',
-    'answers': ['what', 'the', 'actual', 'fuck'],
-  },
-];
-
-/*
-[
-  {
-    'Category':'NotHere',
-    'CatQuestions': [
-      {
-        'questionText': 'you gae or what?',
-        'answers': ['Black', 'yes', 'no', 'White'],
-      },
-      {
-        'questionText': 'What\'s Up ma nigga',
-        'answers': ['the teibol', 'the sky man!', 'me'],
-      },
-      {
-        'questionText': 'billie gaylish',
-        'answers': ['love', 'was entering', 'just', 'bitch'],
-      },
-      {
-        'questionText': 'Considering two girls are in a relationship, where one identifies her self as a man. Then is the other woman straight or gay',
-        'answers': ['what', 'the', 'actual', 'fuck'],
-      },
-      {
-        'questionText': 'mia karamelitsa kai mia karamelitsa kai mia karamelitsa poso kanei?',
-        'answers': ['1', '1 + 1 - 1', '1 - 1 + 1', 'mastora gamiesai'],
-      },
-      {
-        'questionText': 'If a non-binary person likes only non-binary, does that make him gay?',
-        'answers': ['what', 'the', 'actual', 'fuck'],
-      },
-    ]
-  },
-  {
-    'Category':'Adult',
-    'CatQuestions': [
-      {
-        'questionText': 'Adult',
-        'answers': ['L', 'G', 'B', 'T'],
-      },
-    ]
-  },
-  {
-    'Category':'Teen',
-    'CatQuestions': [
-      {
-        'questionText': 'Teen',
-        'answers': ['C', 'H', 'A', 'D'],
-      },
-    ]
-  },
-];
- */
+const questions = {
+  'Teen': [
+    {
+      'questionText': 'Who\'s the impostor?',
+      'answers': ['Red Papatzhs', 'Red Vent', 'Red Apatewnas', 'Red'],
+      'correctAnswer': 4
+    },
+    {
+      'questionText': 'Who is the Prime Minister of Greece?',
+      'answers': [
+        'Nick Bigga',
+        'Papatsipras Aleksios',
+        'Theodorakis Mikhs',
+        'Mhtsotakis Kyriakos'
+      ],
+      'correctAnswer': 4
+    },
+    {
+      'questionText': 'Billie Eilish is a ....',
+      'answers': ['Painter', 'Composer', 'Singer', 'Actor'],
+      'correctAnswer': 3
+    },
+    {
+      'questionText':
+          'Considering two girls are in a store, where one man offers two Watermellons each. How many watermellons will they get?',
+      'answers': [
+        '4',
+        'None',
+        'sqrt(lim x->oo d/dx (3 + 5 + 13 sqrt(y)/Int(MatlabSolver*Symbolab)))',
+        '2'
+      ],
+      'correctAnswer': 1
+    },
+    {
+      'questionText':
+          'Mia karamelitsa kai mia karamelitsa kai mia karamelitsa poso kanei?',
+      'answers': ['1 + 1 + 1', '1 + 1 - 1', '1 - 1 + 1', 'SAE'],
+      'correctAnswer': 1
+    },
+    {
+      'questionText':
+          'If a non-binary number can only be  non-binary, that makeσ him ....?',
+      'answers': ['Int', 'String', 'Bool', 'Double'],
+      'correctAnswer': 2
+    },
+  ],
+  'Adult': [
+    {
+      'questionText': 'What is the capital of Finland?',
+      'answers': ['Venice', 'Helsinki', 'Athens', 'Frankfurt'],
+      'correctAnswer': 2
+    },
+    {
+      'questionText': 'What\'s the biggest animal in the world?',
+      'answers': ['Blue Whale', 'Bear', 'Dinosaur', 'Panda'],
+      'correctAnswer': 1
+    },
+    {
+      'questionText': 'What is Queen Elizabeth II\'s surname? ',
+      'answers': ['Windsor', 'Alexandra', 'Mary', 'Actin'],
+      'correctAnswer': 1
+    },
+    {
+      'questionText': 'What is the largest country in the world?',
+      'answers': ['Japan', 'Nigeria', 'Malta', 'Russia'],
+      'correctAnswer': 4
+    },
+  ]
+};

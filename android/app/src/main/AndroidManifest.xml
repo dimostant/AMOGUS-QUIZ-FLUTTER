@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.new_test_first_app">
+    package="com.example">
    <application
         android:label="AMOGUS Quiz"
         android:name="${applicationName}"

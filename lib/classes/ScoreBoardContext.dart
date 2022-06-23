@@ -1,8 +1,7 @@
 class ScoreBoardContext {
-
   int? score;
-  DateTime? date;
+  String? date;
+  String? time;
 
-  ScoreBoardContext({this.score, this.date});
-
+  ScoreBoardContext({this.score, this.date, this.time});
 }

@@ -1,0 +1,13 @@
+xyz.luan.audioplayers-main-0 C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\audioplayers-0.20.1\android\src\main\res
+xyz.luan.audioplayers-release-1 C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\audioplayers-0.20.1\android\src\release\res
+xyz.luan.audioplayers-core-1.6.0-2 C:\Users\dimos\.gradle\caches\transforms-3\0c089cfaa896ab3efcdc8db1e8d9b237\transformed\core-1.6.0\res
+xyz.luan.audioplayers-jetified-annotation-experimental-1.1.0-3 C:\Users\dimos\.gradle\caches\transforms-3\2c2062e4181376da79bb6bd3bd6b655c\transformed\jetified-annotation-experimental-1.1.0\res
+xyz.luan.audioplayers-jetified-core-ktx-1.6.0-4 C:\Users\dimos\.gradle\caches\transforms-3\5c348d17245eb53b11e501abebc6d78d\transformed\jetified-core-ktx-1.6.0\res
+xyz.luan.audioplayers-jetified-window-java-1.0.0-beta04-5 C:\Users\dimos\.gradle\caches\transforms-3\650027c820cb2e9e64d00aa86c66fc81\transformed\jetified-window-java-1.0.0-beta04\res
+xyz.luan.audioplayers-jetified-window-1.0.0-beta04-6 C:\Users\dimos\.gradle\caches\transforms-3\debc3abd145fdd340fff61a4af1f834b\transformed\jetified-window-1.0.0-beta04\res
+xyz.luan.audioplayers-pngs-7 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\generated\res\pngs\release
+xyz.luan.audioplayers-resValues-8 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\generated\res\resValues\release
+xyz.luan.audioplayers-rs-9 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\generated\res\rs\release
+xyz.luan.audioplayers-mergeReleaseResources-10 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\intermediates\incremental\release\mergeReleaseResources\merged.dir
+xyz.luan.audioplayers-mergeReleaseResources-11 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+xyz.luan.audioplayers-merged_res-12 C:\Users\dimos\StudioProjects\New_test_first_app\build\audioplayers\intermediates\merged_res\release

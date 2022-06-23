@@ -1,0 +1,12 @@
+io.flutter.plugins.pathprovider.path_provider_android-main-0 C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\path_provider_android-2.0.14\android\src\main\res
+io.flutter.plugins.pathprovider.path_provider_android-release-1 C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\path_provider_android-2.0.14\android\src\release\res
+io.flutter.plugins.pathprovider.path_provider_android-core-1.6.0-2 C:\Users\dimos\.gradle\caches\transforms-3\0c089cfaa896ab3efcdc8db1e8d9b237\transformed\core-1.6.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-annotation-experimental-1.1.0-3 C:\Users\dimos\.gradle\caches\transforms-3\2c2062e4181376da79bb6bd3bd6b655c\transformed\jetified-annotation-experimental-1.1.0\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-java-1.0.0-beta04-4 C:\Users\dimos\.gradle\caches\transforms-3\650027c820cb2e9e64d00aa86c66fc81\transformed\jetified-window-java-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-1.0.0-beta04-5 C:\Users\dimos\.gradle\caches\transforms-3\debc3abd145fdd340fff61a4af1f834b\transformed\jetified-window-1.0.0-beta04\res
+io.flutter.plugins.pathprovider.path_provider_android-pngs-6 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\generated\res\pngs\release
+io.flutter.plugins.pathprovider.path_provider_android-resValues-7 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\generated\res\resValues\release
+io.flutter.plugins.pathprovider.path_provider_android-rs-8 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\generated\res\rs\release
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-9 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-10 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+io.flutter.plugins.pathprovider.path_provider_android-merged_res-11 C:\Users\dimos\StudioProjects\New_test_first_app\build\path_provider_android\intermediates\merged_res\release

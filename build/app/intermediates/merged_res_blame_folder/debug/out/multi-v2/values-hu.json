@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\dimos\\StudioProjects\\New_test_first_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
+            "outputFile": "com.example.new_test_first_app-mergeDebugResources-10:/values-hu/values-hu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dimos\\.gradle\\caches\\transforms-2\\files-2.1\\122df2e57d294d1a53db26bbc3b813c1\\core-1.6.0\\res\\values-hu\\values-hu.xml",
+                    "source": "C:\\Users\\dimos\\.gradle\\caches\\transforms-3\\0c089cfaa896ab3efcdc8db1e8d9b237\\transformed\\core-1.6.0\\res\\values-hu\\values-hu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
