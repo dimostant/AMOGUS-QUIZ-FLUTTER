@@ -16,10 +16,6 @@
         "source": "com.example.new_test_first_app-main-6:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.new_test_first_app-merged_res-12:/drawable_launch_background.xml.flat",
-        "source": "com.example.new_test_first_app-main-6:/drawable/launch_background.xml"
-    },
-    {
         "merged": "com.example.new_test_first_app-merged_res-12:/drawable-v21_launch_background.xml.flat",
         "source": "com.example.new_test_first_app-main-6:/drawable-v21/launch_background.xml"
     },

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_test_first_app/GlobalData.dart';
+import 'package:new_test_first_app/data/GlobalData.dart';
 
 class Question extends StatelessWidget {
   final String questionText;

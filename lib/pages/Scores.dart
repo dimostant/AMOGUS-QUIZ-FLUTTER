@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_test_first_app/Widgets/card.dart';
+import 'package:new_test_first_app/Widgets/ScoreCard.dart';
+import '../classes/ScoreBoardContext.dart';
+import '../data/GlobalData.dart';
 
 class ScoresPage extends StatefulWidget {
   const ScoresPage({Key? key}) : super(key: key);
@@ -9,6 +11,8 @@ class ScoresPage extends StatefulWidget {
 }
 
 class _ScoresPageState extends State<ScoresPage> {
+
+  ScoreBoardContext scoreBoardContext = new ScoreBoardContext(); //scores[0]; //To be fixed
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class _ScoresPageState extends State<ScoresPage> {
             title: Text('Scoreboard'),
             backgroundColor: Colors.redAccent,
           ),
-          body: ScoreCard(),
+          body: ScoreCard(scoreBoardContext),
         ),
       );
   }

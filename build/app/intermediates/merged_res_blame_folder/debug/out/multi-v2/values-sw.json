@@ -4,7 +4,7 @@
             "outputFile": "com.example.new_test_first_app-mergeDebugResources-10:/values-sw/values-sw.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dimos\\.gradle\\caches\\transforms-3\\0c089cfaa896ab3efcdc8db1e8d9b237\\transformed\\core-1.6.0\\res\\values-sw\\values-sw.xml",
+                    "source": "C:\\Users\\dimos\\.gradle\\caches\\transforms-3\\cd2546c03482bae8adb3e16aec0ced3d\\transformed\\core-1.6.0\\res\\values-sw\\values-sw.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

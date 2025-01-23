@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../GlobalData.dart';
+import '../data/GlobalData.dart';
 
 class Answer extends StatelessWidget {
   final int answerNum;
@@ -13,7 +13,7 @@ class Answer extends StatelessWidget {
     return Container(
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+          backgroundColor: WidgetStateProperty.all<Color>(Colors.red),
         ),
         onPressed: () {
           selectHandler(answerNum);

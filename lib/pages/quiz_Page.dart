@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import '../data/questions.dart';
 import '../Widgets/question.dart';
 import '../Widgets/answer.dart';
@@ -18,31 +17,41 @@ class QuizPage extends StatefulWidget {
 
 class _MyAppState extends State<QuizPage> {
 
-  var _questionIndex = 0;
-  var _category = 'NotHere';
+  var _questionIndex = 1;
   String date = DateTime.now().toString().substring(0,10);
   String total = '00:00:00';//.substring(11,19) for Time
+  late String? _category;
 
   bool isTimerOn = true;
-
   late Timer _timer;
   int _start = 0;
 
-  void _answerQuestion() {
+  void _answerQuestion(_questionIndex) {
     setState(() {
       _questionIndex = (_questionIndex + 1) % 6;
     });
-    print(_questionIndex);
-    print(date);
   }
 
   @override
   void initState() {
     // TODO: implement initState
-    setState(() {
-      startTimer();
-    });
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final args = ModalRoute.of(context)?.settings.arguments as String?;
+      if (args != null) {
+        setState(() {
+          _category = args;
+          startTimer();
+        });
+      } else {
+        print("No category passed to QuizPage!");
+      }
+    });
+
+    // setState(() {
+    //   startTimer();
+    // });
+    //super.initState();
   }
 
   void startTimer() {
@@ -67,6 +76,9 @@ class _MyAppState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (_category == null) {
+      return const Center(child: CircularProgressIndicator()); // Show a loading indicator
+    }
 
     return Scaffold(
         appBar: AppBar(
@@ -84,8 +96,9 @@ class _MyAppState extends State<QuizPage> {
             Container(
               height: 250,
               child: Question(
-                  questions[_questionIndex]['questionText'] as String,
-                ),
+                questions[_category]?[_questionIndex]['questionText'] as String? ?? 'No question available',
+              ),
+
             ),
             Container (
                 child: Row(
@@ -107,14 +120,14 @@ class _MyAppState extends State<QuizPage> {
                               ? Icons.pause
                               : Icons.play_arrow
                           ), onPressed: () {
-                            if (isTimerOn == 1){
+                            if (isTimerOn == true){
                               setState(() {
-                                isTimerOn == 0;
+                                isTimerOn == false;
                               });
                             }
                             else {
                               setState(() {
-                                isTimerOn == 1;
+                                isTimerOn == true;
                                 startTimer();
                               });
                             }
@@ -131,18 +144,18 @@ class _MyAppState extends State<QuizPage> {
                height: 210,
                 child: Column(
                 children : [
-                  ...(questions[_questionIndex]['answers'] as List<String>)
-                .map((answer) {
-                return Padding(
-                  padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  child: Answer(_answerQuestion, answer));
-                }).toList(),
+                  ...(questions[_category]?[_questionIndex]['answers'] as List<String>)
+                      .map((answer) {
+                      return Padding(
+                        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                        child: Answer(_questionIndex, _answerQuestion, answer));
+                      }).toList(),
                 ]
                ),
             ),
             ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                backgroundColor: WidgetStateProperty.all<Color>(Colors.red),
               ),
               onPressed: () {
                 Navigator.pop(context);

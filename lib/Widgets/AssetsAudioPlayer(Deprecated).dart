@@ -1,70 +1,68 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import '../GlobalData.dart';
 
-class assetsAudioPlayer extends StatefulWidget {
-  const assetsAudioPlayer({Key? key}) : super(key: key);
+class AssetsAudioPlayer extends StatefulWidget {
+  const AssetsAudioPlayer({Key? key}) : super(key: key);
 
   @override
-  State<assetsAudioPlayer> createState() => _assetsAudioPlayerState();
+  State<AssetsAudioPlayer> createState() => _AssetsAudioPlayerState();
 }
 
-class _assetsAudioPlayerState extends State<assetsAudioPlayer> {
-  String audioasset = "sound/AMOGUS.mp3";
+class _AssetsAudioPlayerState extends State<AssetsAudioPlayer> {
+  final String audioasset = "sound/AMOGUS.mp3";
   bool isPlaying = false;
 
-  final cache = AudioCache(fixedPlayer: AudioPlayer());
+  final AudioPlayer _player = AudioPlayer(); // Directly using AudioPlayer
+  final AudioCache _cache = AudioCache();    // Separate cache for loading assets
+  Duration _position = Duration.zero;        // Default position at start
 
   @override
   void initState() {
     super.initState();
-    start();
+    _start();
   }
 
-  void start() async {
-    await cache.fixedPlayer?.seek(position);
-    await cache.loop(audioasset);
-    isPlaying = true;
+  @override
+  void dispose() {
+    _player.dispose(); // Dispose of the player when the widget is removed
+    super.dispose();
   }
 
-  void getDuration() async {
-    await cache.fixedPlayer?.getCurrentPosition();
+  Future<void> _start() async {
+    // Load the audio file and play it
+    final url = await _cache.load(audioasset);
+    await _player.setUrl(url.path, isLocal: true);
+    await _player.seek(_position); // Use seek instead of setPosition
+    await _player.setReleaseMode(ReleaseMode.LOOP);
+    await _player.resume();
+
+    setState(() {
+      isPlaying = true;
+    });
   }
 
-  void changePlayerStatus() async {
-    if (isPlaying == true) {
-      await cache.fixedPlayer?.pause();
-      setState(() {
-        isPlaying = false;
-      });
+  Future<void> _changePlayerStatus() async {
+    if (isPlaying) {
+      await _player.pause();
     } else {
-      await cache.fixedPlayer?.resume();
-      setState(() {
-        isPlaying = true;
-      });
+      await _player.resume();
     }
+    setState(() {
+      isPlaying = !isPlaying;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Row(
+    return Row(
       children: [
-        if (isPlaying == true)
-          IconButton(
-            icon: const Icon(IconData(0xf0297, fontFamily: 'MaterialIcons')),
-            onPressed: () {
-              changePlayerStatus();
-            },
-          )
-        else
-          IconButton(
-            icon: const Icon(IconData(0xf0299, fontFamily: 'MaterialIcons')),
-            onPressed: () {
-              changePlayerStatus();
-            },
+        IconButton(
+          icon: Icon(
+            isPlaying ? Icons.pause_circle_filled : Icons.play_circle_filled,
           ),
+          onPressed: _changePlayerStatus,
+        ),
       ],
-    ));
+    );
   }
 }

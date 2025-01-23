@@ -1,5 +1,5 @@
 const questions = {
-  'Teen': [
+  'Beginner': [
     {
       'questionText': 'Who\'s the impostor?',
       'answers': ['Red Papatzhs', 'Red Vent', 'Red Apatewnas', 'Red'],
@@ -8,7 +8,7 @@ const questions = {
     {
       'questionText': 'Who is the Prime Minister of Greece?',
       'answers': [
-        'Nick Bigga',
+        'Nick Rikka',
         'Papatsipras Aleksios',
         'Theodorakis Mikhs',
         'Mhtsotakis Kyriakos'
@@ -39,12 +39,12 @@ const questions = {
     },
     {
       'questionText':
-          'If a non-binary number can only be  non-binary, that makeσ him ....?',
+          'If a non-binary number can only be  non-binary, that makes it ....?',
       'answers': ['Int', 'String', 'Bool', 'Double'],
       'correctAnswer': 2
     },
   ],
-  'Adult': [
+  'Expert': [
     {
       'questionText': 'What is the capital of Finland?',
       'answers': ['Venice', 'Helsinki', 'Athens', 'Frankfurt'],

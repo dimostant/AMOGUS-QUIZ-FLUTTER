@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\audioplayers-0.20.1\android\src\main\AndroidManifest.xml
+8-->C:\Users\dimos\AppData\Local\Pub\Cache\hosted\pub.dev\audioplayers-0.20.1\android\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="16" />
-9-->C:\Projects\flutter_windows_2.2.2-stable\flutter\.pub-cache\hosted\pub.dartlang.org\audioplayers-0.20.1\android\src\main\AndroidManifest.xml
+9-->C:\Users\dimos\AppData\Local\Pub\Cache\hosted\pub.dev\audioplayers-0.20.1\android\src\main\AndroidManifest.xml
 10
 11</manifest>

@@ -1,1 +1,0 @@
-com.example.new_test_first_app

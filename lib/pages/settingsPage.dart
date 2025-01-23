@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../GlobalData.dart';
+import '../data/GlobalData.dart';
 import '../classes/Audio.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -144,7 +144,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.red),
+                          WidgetStateProperty.all<Color>(Colors.red),
                     ),
                     onPressed: () {
                       if (newFont > 25 || newFont < 1) {

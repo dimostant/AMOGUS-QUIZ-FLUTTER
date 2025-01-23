@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:new_test_first_app/pages/mainPage.dart';
 import 'package:new_test_first_app/pages/quiz_Page.dart';
