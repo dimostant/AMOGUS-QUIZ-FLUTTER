@@ -1,4 +1,4 @@
-#Thu Jan 23 04:37:03 EET 2025
+#Thu Jan 23 05:13:02 EET 2025
 base.0=C\:\\Users\\dimos\\@Files\\StudioProjects\\New_test_first_app\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\dimos\\@Files\\StudioProjects\\New_test_first_app\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\dimos\\@Files\\StudioProjects\\New_test_first_app\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

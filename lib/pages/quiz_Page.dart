@@ -20,17 +20,11 @@ class _MyAppState extends State<QuizPage> {
   var _questionIndex = 1;
   String date = DateTime.now().toString().substring(0,10);
   String total = '00:00:00';//.substring(11,19) for Time
-  late String? _category;
+  String? _category; // Make _category nullable
 
   bool isTimerOn = true;
   late Timer _timer;
   int _start = 0;
-
-  void _answerQuestion(_questionIndex) {
-    setState(() {
-      _questionIndex = (_questionIndex + 1) % 6;
-    });
-  }
 
   @override
   void initState() {
@@ -52,6 +46,12 @@ class _MyAppState extends State<QuizPage> {
     //   startTimer();
     // });
     //super.initState();
+  }
+
+  void _answerQuestion(_questionIndex) {
+    setState(() {
+      _questionIndex = (_questionIndex + 1) % 6;
+    });
   }
 
   void startTimer() {

@@ -11,21 +11,25 @@ class ScoresPage extends StatefulWidget {
 }
 
 class _ScoresPageState extends State<ScoresPage> {
-
-  ScoreBoardContext scoreBoardContext = new ScoreBoardContext(); //scores[0]; //To be fixed
+  ScoreBoardContext scoreBoardContext = scores.isNotEmpty ? scores[0] : ScoreBoardContext(score: 0, date: 'N/A', time: '00:00');
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            elevation: 0,
-            title: Text('Scoreboard'),
-            backgroundColor: Colors.redAccent,
-          ),
-          body: ScoreCard(scoreBoardContext),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        title: const Text('Scoreboard'),
+        backgroundColor: Colors.redAccent,
+      ),
+      body: scores.isNotEmpty
+          ? ScoreCard(scoreBoardContext)
+          : Center(
+        child: Text(
+          'No scores available',
+          style: TextStyle(fontSize: fontsize, color: Colors.red),
         ),
-      );
+      ),
+    );
   }
 }
